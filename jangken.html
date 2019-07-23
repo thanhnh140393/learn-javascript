@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style >
+		body{
+			padding: 0;
+			margin: 0;
+			background-color:#f3f3f3;
+  			display:flex;
+ 			justify-content:center;
+  			align-items:center;
+  			height:100vh;/* //vh = 100% khung  */
+  			font-family: sans-serif;
+		}
+		button{
+			height: 40px;
+			width: 100px;
+			border-radius: 10px;
+			outline:none;
+		}
+		p{
+			font-weight: 200;
+			font-size: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	
+	<div>
+	<button id="bua">グー</button>
+	<button id="keo">チョキ</button>
+	<button id="bao">パー</button>
+	<p >相手 :<span id="aite"></span></p>
+	<p >結果 :<span id="kekka"></span></p>
+	</div>
+</body>
+<script >
+	window.onload = function(){
+		myNumber = document.getElementById("bua").onclick = bua;
+		myNumber = document.getElementById("keo").onclick = keo;
+		myNumber = document.getElementById("bao").onclick = bao;
+	}
+	function bua(){
+		
+		hisNumber = Math.floor(Math.random()*3);
+		var buaNumber = 0;
+		if( hisNumber == 0 ){
+		aiteHand = "グー";
+		}
+		if( hisNumber == 1 ){
+		aiteHand = "チョキ";
+		}
+		if( hisNumber == 2 ){
+		aiteHand = "パー";
+		}
+		if( buaNumber - hisNumber == -2 ){
+		ketka = "負け";
+		}
+		if( buaNumber - hisNumber == -1 ){
+		ketka = "勝ち";
+		}
+		if( buaNumber - hisNumber == 0 ){
+		ketka = "引き分け";
+		}
+		if( buaNumber - hisNumber == 1 ){
+		ketka = "負け";
+		}
+		if( buaNumber - hisNumber == 2 ){
+		ketka = "勝ち";
+		}
+		document.getElementById("aite").innerHTML = aiteHand;
+		document.getElementById("kekka").innerHTML = ketka;
+}
+	function keo(){
+		
+		hisNumber = Math.floor(Math.random()*3);
+		var keoNumber = 1;
+		if( hisNumber == 0 ){
+		aiteHand = "グー";
+		}
+		if( hisNumber == 1 ){
+		aiteHand = "チョキ";
+		}
+		if( hisNumber == 2 ){
+		aiteHand = "パー";
+		}
+		if( keoNumber - hisNumber == -2 ){
+		ketka = "負け";
+		}
+		if( keoNumber - hisNumber == -1 ){
+		ketka = "勝ち";
+		}
+		if( keoNumber - hisNumber == 0 ){
+		ketka = "引き分け";
+		}
+		if( keoNumber - hisNumber == 1 ){
+		ketka = "負け";
+		}
+		if( keoNumber - hisNumber == 2 ){
+		ketka = "勝ち";
+		}
+		document.getElementById("aite").innerHTML = aiteHand;
+		document.getElementById("kekka").innerHTML = ketka;
+}
+function bao(){
+		
+		hisNumber = Math.floor(Math.random()*3);
+		var baoNumber = 2;
+		if( hisNumber == 0 ){
+		aiteHand = "グー";
+		}
+		if( hisNumber == 1 ){
+		aiteHand = "チョキ";
+		}
+		if( hisNumber == 2 ){
+		aiteHand = "パー";
+		}
+		if( baoNumber - hisNumber == -2 ){
+		ketka = "負け";
+		}
+		if( baoNumber - hisNumber == -1 ){
+		ketka = "勝ち";
+		}
+		if( baoNumber - hisNumber == 0 ){
+		ketka = "引き分け";
+		}
+		if( baoNumber - hisNumber == 1 ){
+		ketka = "負け";
+		}
+		if( baoNumber - hisNumber == 2 ){
+		ketka = "勝ち";
+		}
+		document.getElementById("aite").innerHTML =aiteHand;
+		document.getElementById("kekka").innerHTML =ketka;
+}
+</script>
+</html>
